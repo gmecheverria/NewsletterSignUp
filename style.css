@@ -50,29 +50,69 @@ body {
     max-width: 100%;
     height: 100%;
 }
-.emailtxtb {
+.email {
     font-size: 13px;
     margin-top: 25px;
 }
 
-.emailtxtb input{
+.email[data-error] .input {
+    border-color: hsl(359, 100%, 55%);
+    color: hsl(359, 100%, 55%);
+    background: hsl(0, 76%, 92%);
+}
+
+.email[data-error]::after {
+    content: attr(data-error);
+    display: inline;
+}
+
+.email input{
     width: 50%;
     height: 50px;
     border-color: hsl(192,15%,94%);
     border-radius: 10px;
-    margin-top: 10px;
     padding-left: 20px;
+    margin-top: 10px;
+    display: block;
 }
 
-.emailtxtb button{
+.button {
+    width: 100%;
+    cursor: pointer;
+}
+.button button{
+    width: 50%;
+    height: 50px;
     background-color: hsl(234, 29%, 20%);
     border-radius: 10px;
     color: white;
     font-size: 16px;
-    margin-top: 10px;
-    height: 50px;
-    width: 50%;
+    cursor: pointer;
+    outline: none;
 }
+
+/* .message {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+} */
+
+/* .message .success {
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    display: none;
+} */
+
+.message .error {
+    font-size: 20px;
+    color: red;
+    float: right;
+    padding: 2px;
+}
+
 
 /* .attribution {
     font-size: 11px; text-align: center; 
